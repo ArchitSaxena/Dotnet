@@ -25,6 +25,7 @@ namespace Grade
             Console.WriteLine(stats.AvgGrade);
             Console.WriteLine(stats.MaxGrade);
             Console.WriteLine(stats.MinGrade);
+
         }
     }
 }
