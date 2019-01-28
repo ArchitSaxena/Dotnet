@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Grade
 {
-    class GradeBook
+    public class GradeBook
     {
+        public string Name;
+
         List<Double> grades;
         public GradeBook()
         {
