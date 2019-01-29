@@ -1,0 +1,7 @@
+c:\users\asaxena4\source\repos\Grade\Grade\bin\Debug\Grade.exe.config
+c:\users\asaxena4\source\repos\Grade\Grade\bin\Debug\Grade.exe
+c:\users\asaxena4\source\repos\Grade\Grade\bin\Debug\Grade.pdb
+c:\users\asaxena4\source\repos\Grade\Grade\obj\Debug\Grade.csprojAssemblyReference.cache
+c:\users\asaxena4\source\repos\Grade\Grade\obj\Debug\Grade.csproj.CoreCompileInputs.cache
+c:\users\asaxena4\source\repos\Grade\Grade\obj\Debug\Grade.exe
+c:\users\asaxena4\source\repos\Grade\Grade\obj\Debug\Grade.pdb
