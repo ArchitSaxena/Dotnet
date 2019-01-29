@@ -8,7 +8,7 @@ namespace Grade
 {
     public class GradeBook
     {
-        public string Name;
+        
 
         List<Double> grades;
         public GradeBook()
@@ -33,6 +33,30 @@ namespace Grade
             stats.AvgGrade = sum / grades.Count;
             return stats;
         }
+        private string _name;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if(_name!= null && _name!=value)
+                {
+                  // _name = "Error";
+                    NameChanged(_name, value);
+                    _name = value;
+                }
+                else
+                {
+                    if(_name== null)
+                    _name = value;
+                }
+            }
+            
+        }
+        public NameChangedDelegate NameChanged;
         public void addGrade(double grade)
         {
             grades.Add(grade);
