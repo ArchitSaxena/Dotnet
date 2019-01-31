@@ -16,5 +16,32 @@ namespace Grade
             MaxGrade = double.MinValue;
             MinGrade = double.MaxValue;
         }
+        public string LetterGrade
+        {
+            get
+            {
+                string result;
+                if (AvgGrade >= 90)
+                {
+                    return "A";
+                }
+                else if (AvgGrade >= 80)
+                {
+                    return "B";
+                }
+                else if (AvgGrade >= 70)
+                {
+                    return "C";
+                }
+                else if (AvgGrade >= 60)
+                {
+                    return "D";
+                }
+                else
+                    return "F";
+
+                return result;
+            }
+        }
     }
 }

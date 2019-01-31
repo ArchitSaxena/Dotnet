@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,15 +9,13 @@ namespace Grade
 {
     public class GradeBook
     {
-        
-
-        List<Double> grades;
+        protected List<Double> grades;
         public GradeBook()
         {
              grades = new List<Double>();
         }
 
-        public GradeStatistics ComputeStatistics()
+        public virtual GradeStatistics ComputeStatistics()
         {
             GradeStatistics stats= new GradeStatistics();
             double sum = 0;
@@ -33,6 +32,13 @@ namespace Grade
             stats.AvgGrade = sum / grades.Count;
             return stats;
         }
+        public void WriteGrade(TextWriter destination)
+        {
+            for(int i= grades.Count; i>0; i--)
+            {
+                destination.WriteLine(grades[i - 1]);
+            }
+        }
         private string _name;
         public string Name
         {
@@ -42,7 +48,11 @@ namespace Grade
             }
             set
             {
-                if(_name!= null && _name!=value)
+                if(string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Name cannot be null or empty");
+                }
+                if(_name!= null)
                 {
                   // _name = "Error";
                     NameChanged(_name, value);
